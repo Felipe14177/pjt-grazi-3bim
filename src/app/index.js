@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
-import { BackHandler, StyleSheet, Text, View } from "react-native";
-import { useAuth } from "../hooks/Auth";
+import { BackHandler, Button, StyleSheet, Text, View } from "react-native";
+import { useAuth } from "../hook/Auth";
 import { router } from "expo-router";
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style>Minha primeira janela</Text>
+      <Text style={styles.title}>Aplicativo pronto para usar</Text>
       <Button title="Signin Super" onPress={handleEntrarSuper} />
       <Button
         title="Signin Adm"
@@ -29,8 +29,11 @@ export default function App() {
           signIn({ email: "user@email.com", password: "User123!" })
         }
       />
-      <Button title="Sobre" onPress={() =>router.push("/about")} />
-        <Button title="Sair do Aplicativo" onPress={()=>BackHandler.exitApp}/>
+      <Button title="Sobre" onPress={() => router.push("/about")} />
+      <Button
+        title="Sair do Aplicativo"
+        onPress={() => BackHandler.exitApp()}
+      />
       <StatusBar style="auto" />
     </View>
   );

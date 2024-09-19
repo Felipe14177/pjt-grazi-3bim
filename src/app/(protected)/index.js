@@ -1,5 +1,5 @@
 import { Button, Text, View } from "react-native";
-import { useAuth } from "../../hooks/Auth";
+import { useAuth } from "../../hook/Auth";
 
 export default function Home() {
   const { signOut } = useAuth();
@@ -10,4 +10,4 @@ export default function Home() {
       <Button title="Sair" onPress={() => signOut()} />
     </View>
   );
-}   
+}
