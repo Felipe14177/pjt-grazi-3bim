@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Aplicativo pronto para usar</Text>
+      <Text style={styles.title}>Aplicativo do Felipe</Text>
       <Button title="Signin Super" onPress={handleEntrarSuper} />
       <Button
         title="Signin Adm"
